@@ -1,6 +1,25 @@
 = louisville
 
-Description goes here.
+First of all, sorry for the pun.
+
+Louisville is a small library for manipulating strings, mostly to normalize them.
+
+Requiring this gem adds several methods to String, the most important are:
+
+String#asciify - replaces all non-ASCII chars with their nearest equivalent, or removes them.
+String#normalize - does the same, and also does a lot of wrangling to get a normalized string that serves as a canonical representation
+of the input. It replaces abbreviations like St. or St to Sankt, moves post-fixed "the"s around, and other stuff.
+The result is a good base to compare names of places and other things that come from different sources - most of the time,
+the normalized strings will be identical.
+At Travel IQ, this is used to compare hotel names. It also makes a great starting point for autocompleter data - save
+a normalized version of the items in the DB, and do the queries against the DB with the normalized user input string.
+It's also useful, of all things, for generating slugs !
+
+The focus is definitely on german text - the default replacements and abbreviations are in german. Feel free to contribute !
+
+== Authors
+
+Bryan JJ Buckley (bjjb.org), Martin Tepper (monogreen.de)
 
 == Contributing to louisville
  
@@ -14,6 +33,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Martin Tepper. See LICENSE.txt for
+Copyright (c) 2011 Travel IQ. See LICENSE.txt for
 further details.
 
