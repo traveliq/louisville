@@ -35,6 +35,19 @@ It seems like there is no way to tell a gem that it has different dependencies b
 Because of that, those dependencies are not in thr gemspec, but are verified at runtime - sorry for that !
 If there is a better way to do this, please let us know.
 
+== Installation
+
+Currently, you can only install from Github. Add this to your Gemfile:
+
+if RUBY_VERSION >= "1.9.0"
+  gem 'unicode_utils'
+else
+  gem 'diacritics_fu', '= 1.0.3'
+end
+gem 'louisville', :git => 'git://github.com/traveliq/louisville.git'
+
+If you don't use bundler, you're on your own, sorry.
+
 == Authors
 
 Bryan JJ Buckley (bjjb.org), Martin Tepper (monogreen.de)
