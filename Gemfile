@@ -1,10 +1,5 @@
 source "http://rubygems.org"
 
-if RUBY_VERSION >= "1.9.0"
-  gem 'unicode_utils'
-else
-  gem 'diacritics_fu', '= 1.0.3'
-end
 gem 'activesupport'
 gem 'i18n'
 
